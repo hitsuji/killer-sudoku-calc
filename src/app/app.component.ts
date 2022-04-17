@@ -43,7 +43,11 @@ export class AppComponent {
     this.calculateResults();
   }
 
-  calculateResults() {
+  toggleAttribute(event: any, name: string) {
+    event.currentTarget?.toggleAttribute(name);
+  }
+
+  private calculateResults() {
     this.results = [];
 
     if (!this.total || !this.count) {
@@ -53,7 +57,7 @@ export class AppComponent {
     this.findResults(this.count, this.total);
   }
 
-  findResults(n: number, target: number, c:number = 1, result: Array<number> = []) {
+  private findResults(n: number, target: number, c:number = 1, result: Array<number> = []) {
     if (n == 0 && target == 0) {
       this.results.push(result);
     } else if (n > 0 && target > 0) {

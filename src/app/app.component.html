@@ -13,7 +13,7 @@
 <div class="container">
   <div class="row" *ngFor="let result of results">
     <div class="col text-center fw-bold my-1 fs-3">
-      <span class="badge rounded-pill result-set">
+      <span class="badge rounded-pill result-set" (click)="toggleAttribute($event, 'data-selected')">
         <span class="badge rounded-pill result mx-1" *ngFor="let num of result">{{ num }}</span>
       </span>
     </div>

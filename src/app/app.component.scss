@@ -19,4 +19,9 @@
   .result {
     background-color: $orange-400;
   }
+
+  &[data-selected] .result {
+    background-color: $orange-200;
+    color: $gray-600;
+  }
 }
